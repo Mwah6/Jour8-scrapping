@@ -22,6 +22,7 @@ def dark_trader
     final_array << { currency_array[n] => price_array[n]}
   end
   print final_array
+  return final_array
 end
 
 
