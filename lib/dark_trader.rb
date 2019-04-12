@@ -25,5 +25,3 @@ def dark_trader
   return final_array
 end
 
-
-dark_trader

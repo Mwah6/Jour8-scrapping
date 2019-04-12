@@ -15,7 +15,7 @@ end
 # Obtention des urls par la liste des villes
 def get_townhall_urls (city_array)
   city_townhall_urls = city_array.map do |ville| #création des liens html
-    "http://annuaire-des-mairies.com/95/#{ville.downcase.gsub(" ", "-")}.html"
+    "http://annuaire-des-mairies.com/95/#{ville.downcase.gsub(" ", "-")}.html" #Pourquoi est-ce qu'on utilise le nom des villes pour créer les liens alors qu'il y a un attribut href qui n'attend que ça -_-'
   end
   puts city_townhall_urls
   return city_townhall_urls
@@ -46,7 +46,6 @@ end
 # get_townhall_email (get_townhall_urls (get_city))
 
 def perform
-  formulemagique (get_townhall_email (get_townhall_urls (get_city))),get_city
+  formulemagique (get_townhall_email (get_townhall_urls (get_city))),get_city #Pourquoi est-ce qu'on utilise get_city plusieurs fois alors qu'on pourrait le stocker dans un variable et l'envoyer (optimisation ?)
 end
 
-perform
