@@ -67,6 +67,7 @@ def get_deputes
     n += 1
   end
   puts final_array[0], final_array[1], final_array[2], final_array[3] #Pour montrer
+  return final_array
 end
 
 def perform
